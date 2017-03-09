@@ -27,6 +27,8 @@ public class OrderController {
 	@Autowired
 	OrderService orderService;
 
+	System.out.println("Jenkins Test");
+
 	@RequestMapping(value = "/order/{orderNo}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public ResponseEntity getOrderByNumber(@PathVariable String orderNo) {
 
