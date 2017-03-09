@@ -32,6 +32,7 @@ public class OrderController {
 	@RequestMapping(value = "/order/{orderNo}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public ResponseEntity getOrderByNumber(@PathVariable String orderNo) {
 
+		logger.info("Jenkins build test");
 		logger.info("orderNo====" + orderNo);
 		Order order = orderService.findByOrderNo(orderNo);
 		return new ResponseEntity(order, HttpStatus.OK);
